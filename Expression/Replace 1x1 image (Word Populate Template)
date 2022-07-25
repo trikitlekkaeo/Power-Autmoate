@@ -1,0 +1,9 @@
+Initialize Variable
+Name: 1x1 Image
+{
+  "$content-type": "image/png",
+  "$content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCNdjYAAAAAIAAeIhvDMAAAAASUVORK5CYII="
+}
+
+Expression: Conditon if image is empty value.
+if(empty(outputs('Get_file_content')?['body']), variables('1x1 Image'), outputs('Get_file_content')?['body'])
